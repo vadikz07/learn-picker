@@ -1,5 +1,5 @@
 // globals
-const choices = ['javascript', 'gamedev', 'figma', 'python', 'guitar'];
+const choices = ['javascript','fusion360', 'gamedev', 'figma', 'python', 'guitar'];
 const historyPicks = ['no-task', 'no-task', 'no-task', 'no-task'];
 refreshIconHistory();
 const repeatThreshold = 2;
@@ -22,7 +22,8 @@ function setMessageBox(msg) {
 
 function updateDate() {
     let actTime = new Date();
-    actTime = `${actTime.getDate()}/${actTime.getMonth()+1}/${actTime.getFullYear()}`;
+    let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    actTime = `${actTime.getDate()} of ${monthNames[actTime.getMonth()]} of ${actTime.getFullYear()}`;
     const dateEl = document.getElementById('date-elem');
     dateEl.innerHTML = actTime;
 }
